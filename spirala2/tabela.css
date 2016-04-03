@@ -1,0 +1,261 @@
+table, th, td {
+    border: 1px solid black;
+    width: 5%;
+}
+
+td{
+    padding: 1%;
+}
+
+th{
+    font-size: 1.4em;
+    font-family: sans-serif;
+    color:dimgray;
+}
+
+
+#backgroundlogo {
+    
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+    height: 100px;
+    width: 100px;
+}
+
+
+
+#logo1 {
+        transform: skew(-26deg, -19deg) ;
+        -webkit-transform: skew(-26deg, -19deg) ;
+        -moz-transform: skew(-26deg, -19deg) ;
+        -o-transform: skew(-26deg, -19deg) ;
+        -ms-transform: skew(-26deg, -19deg) ;
+    
+    font-size: 4em;
+    position: absolute;
+    color: darkred;
+    
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+     border: 2px solid;
+    border-radius: 25px;
+    
+    margin-left: 40px;
+    
+    opacity: 0.5;
+}
+
+
+
+#logo2 {
+     
+        font-size: 2em;
+        color: darkred;
+        font-weight: bolder;
+        position: absolute;
+  
+}
+
+#mainlogo {
+    width:120px;
+    height: 80px;
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    border-radius: 20px;
+    
+    
+    position: fixed;
+}
+
+#logo3 {
+    margin-left: 81px;
+    font-size: 5em;
+    padding: 0px;
+    position: absolute;
+    color:darkred;
+    
+    opacity: 0.9;
+
+}
+
+#logo4 {
+    position: absolute;
+    margin-left: 78px;
+    margin-top: 23px;
+    font-size: 3em;
+    color: darkred;
+    
+    opacity: 0.7;
+    
+}
+
+#logo5 {
+    position: absolute;
+    margin-left: 73px;
+    margin-top: 33px;
+    font-size: 2em;
+    color: darkred;
+    
+    opacity: 0.5;
+}
+
+#logo6 {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 42px;
+    font-size: 1em;
+    color: darkred;
+}
+
+#logo11 {
+   
+    font-size: 4.9em;
+    position: absolute;
+    margin-top:-11px;
+    color:darkred;
+    margin-left: -7px;
+    
+    -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.9;
+}
+
+#logo10 {
+    font-size: 3.4em;
+    position: absolute;
+    margin-top:5px;
+    color:darkred;
+    margin-left: 9px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.7;
+}
+
+#logo9 {
+    font-size: 2.2em;
+    position: absolute;
+    margin-top:14px;
+    color:darkred;
+    margin-left: 23px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.5;
+}
+
+#logo8 {
+    font-size: 1.3em;
+    position: absolute;
+    margin-top:23px;
+    color:darkred;
+    margin-left: 33px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+}
+
+
+
+
+#tabela {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    display: block;
+    float: left;    
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+
+
+
+
+
+.parni {
+    background-color: darkgreen;
+    
+}
+
+.neparni {
+    background-color: darkred;
+    opacity: 0.9;
+    
+
+}
+
+body {
+  /*  background-color: black;
+  /*  background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+ /*   background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+ /*   background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+  /*  background: linear-gradient(black, gray, black); /* Standard syntax */    
+}
+
+
+
+#background {
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+    
+    height: 100%;
+    width:100%;
+    position: relative;
+    margin:0;
+    padding: 0;
+    box-sizing: content-box;
+    
+    border-radius: 10px;
+}
+
+body {
+      background-color: gray;
+}
+
+#navigationf {
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+#navbuttonsf {
+    text-align: center;
+}
+
+.navpagesf {
+    border-radius: 20px;
+    opacity: 0.95;
+    background-image: linear-gradient(black, red, black);
+    color: darkgray;
+    padding: 8px;
+    font-size: 0.6em;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navigationf {
+    zoom:1.7;
+}
