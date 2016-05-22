@@ -1,0 +1,304 @@
+
+fieldset {
+    margin 0 0 0 -10px;
+ 
+    padding: 0;
+  
+}
+
+form {
+
+   
+}
+
+label.field {
+    text-align: right;
+    margin-right: 4px;
+    margin-left: 15px;
+    width: 150px;
+    float: left;
+    font-family: cursive;
+    font-size: 1.1em;
+  
+}
+
+input {
+    width:240px;
+    height: 25px;
+    color: black;;
+    font-size: 1.1em;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+
+legend {
+    font-size: 2em;
+    font-weight: bolder;
+    font-family:cursive;
+    display: block;
+    color: darkred;
+}
+
+
+
+
+
+body {
+
+    align-content: center;
+}
+
+.fieldset {
+     
+     display: block;
+     align-content: center;
+     padding: 3px 3px 3px 3px;
+     width: 450px;
+     border-color: darkred;
+     border-style: solid;
+     background-color:black;
+}
+
+p {
+  color: darkred;
+}
+
+#submit {
+    width: 100px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    background-color: darkred;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+body {
+    
+}
+
+.backgroundf {
+    height: 100%;
+    width:100%;
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+#backgroundpicf {
+    width:100%;
+    height:100%;
+}
+
+#signupform {
+    width: 400px;
+    height: 370px;
+    background-color: darkred;
+   
+    position: absolute;
+    display: table;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    
+    margin: auto;
+    
+    opacity: 0.9;
+    
+    border-style: double;
+    border-color: gray;
+}
+
+
+#mainlogo {
+    width:120px;
+    height: 80px;
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    border-radius: 20px;
+    
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+
+
+
+#logo1 {
+        transform: skew(-26deg, -19deg) ;
+        -webkit-transform: skew(-26deg, -19deg) ;
+        -moz-transform: skew(-26deg, -19deg) ;
+        -o-transform: skew(-26deg, -19deg) ;
+        -ms-transform: skew(-26deg, -19deg) ;
+    
+    font-size: 4em;
+    position: absolute;
+    color: darkred;
+    
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+     border: 2px solid;
+    border-radius: 25px;
+    
+    margin-left: 40px;
+    
+    opacity: 0.5;
+}
+
+
+
+#logo2 {
+     
+        font-size: 2em;
+        color: darkred;
+        font-weight: bolder;
+        position: absolute;
+  
+}
+
+#mainlogo {
+    width:120px;
+    height: 80px;
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    border-radius: 20px;
+    
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+#logo3 {
+    margin-left: 81px;
+    font-size: 5em;
+    padding: 0px;
+    position: absolute;
+    color:darkred;
+    
+    opacity: 0.9;
+
+}
+
+#logo4 {
+    position: absolute;
+    margin-left: 78px;
+    margin-top: 23px;
+    font-size: 3em;
+    color: darkred;
+    
+    opacity: 0.7;
+    
+}
+
+#logo5 {
+    position: absolute;
+    margin-left: 73px;
+    margin-top: 33px;
+    font-size: 2em;
+    color: darkred;
+    
+    opacity: 0.5;
+}
+
+#logo6 {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 42px;
+    font-size: 1em;
+    color: darkred;
+}
+
+#logo11 {
+   
+    font-size: 4.9em;
+    position: absolute;
+    margin-top:-11px;
+    color:darkred;
+    margin-left: -7px;
+    
+    -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.9;
+}
+
+#logo10 {
+    font-size: 3.4em;
+    position: absolute;
+    margin-top:5px;
+    color:darkred;
+    margin-left: 9px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.7;
+}
+
+#logo9 {
+    font-size: 2.2em;
+    position: absolute;
+    margin-top:14px;
+    color:darkred;
+    margin-left: 23px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.5;
+}
+
+#logo8 {
+    font-size: 1.3em;
+    position: absolute;
+    margin-top:23px;
+    color:darkred;
+    margin-left: 33px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+}
+#navbuttonsf {
+    text-align: center;
+}
+
+.navpagesf {
+    border-radius: 20px;
+    opacity: 0.95;
+    background-image: linear-gradient(black, red, black);
+    color: darkgray;
+    padding: 8px;
+    font-size: 0.6em;
+}
+
+#navigationf {
+    float:right;
+    zoom:1.5;
+}
+
+body {
+    
+}
+
+a {
+    text-decoration: none;
+}

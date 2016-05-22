@@ -1,0 +1,229 @@
+
+.left {
+    border: thin solid rgb(80,80,80) ;
+    width: 35%;
+    padding: 3%; margin-right: 4%;
+    
+    display: inline-block;
+    float: left;
+    
+    min-height: 580px;
+    
+}
+
+
+
+#tekst_prikazi {
+   display: block;
+    border: 1px solid #848484;
+    min-height: 100px;
+    width: 60%;
+    
+    margin-bottom: 6%;
+
+    padding: 1%;
+}
+
+
+
+.right {
+    border: thin solid rgb(80,80,80) ;
+    width: 35%;
+    padding: 3%; margin-left: 4%;
+    
+    
+    display: inline-block;
+    
+    min-height: 580px;
+    
+}
+
+
+
+
+
+input {
+    
+}
+
+
+
+#naslov {
+    
+    display: block;
+    border: 1px solid #848484;
+    min-height: 40px;
+    width: 60%;
+
+    margin-bottom: 3%;
+    padding: 1%;
+
+}
+
+#slka_prikazi {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 44%;
+}
+
+#tekst {
+
+    display: block;
+    border: 1px solid #848484;
+    min-height: 90px;
+    width: 60%;
+
+    margin-bottom: 3%;
+    padding: 1%;
+   
+}
+
+.datum {
+    height: 10%;
+    width: 100%;
+    
+    border-color: white;
+    border-style: double;
+    
+    text-align: center;
+    padding: 9%,
+    
+    margin-top: 40%;
+    position: relative;
+    
+    color:white;
+}
+
+.l {
+    float:left;
+    margin-right: 1%;
+    width: 40%;
+}
+
+.r {
+    margin-left: 1%;
+    width: 40%;
+
+}
+
+#izgled {
+    width:20%;
+    margin-right: 5%;
+
+}
+
+
+
+#akcije {
+   
+    margin-top: 3%;
+}
+
+#dodaj {
+   width:20%;
+}
+
+#naslov_prikazi {
+    
+}
+
+#preview {
+    float: left;
+    margin-right: 5px;
+    margin-top: 20px;
+    width:70%;
+    border-style: solid;
+  
+    min-height: 450px;
+    position: relative;
+    
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+     padding: 2%;           
+
+}
+
+#prikaz {
+    margin-bottom: 1.5%;
+}
+
+#slika_prikazi {
+
+   vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 44%;
+  
+}
+
+
+
+
+
+
+
+li {
+     float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+nav {
+    width: 100%;
+    clear: both;
+    zoom : 1.3;
+    position: relative;
+    margin-top: 4%;
+  
+}
+
+
+
+#right {
+    float: right;
+     right: 0;
+     top: 0;
+    position: absolute;
+   
+}
+
+
+
+#left {
+        width: 50%;
+}
+
+#logout {
+    background-color:darkgray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  
+}
+
+#dvokod {
+    width:10%;
+}
+
+#pozivni {
+    width:10%;
+}

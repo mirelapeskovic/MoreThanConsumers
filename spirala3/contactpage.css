@@ -1,0 +1,384 @@
+
+.background {
+    height: 100%;
+    width:100%;
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+#backgroundpic {
+    width:100%;
+    height:100%;
+ 
+}
+
+
+
+
+label {
+    display: block;
+    margin-top:20px;
+    letter-spacing: 2px;
+    color: darkred;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+body {
+    display: block;
+    margin 0 auto;
+    width: 576px;
+   
+}
+
+form {
+ 
+    width:459px;
+    margin:0 auto;
+    padding: 20px;
+}
+
+input {
+	width:312px;
+	height:27px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+    font-weight: bolder;
+	color:black;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    
+    box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-background-clip: padding-box;
+    outline: 0;
+
+
+
+    
+    border:1px solid #97d6eb;
+}
+
+
+
+
+
+
+#submit {
+    width: 100px;
+    height:38px;
+    border:none;
+    margin-top:10px;
+    cursor:pointer;
+    background-color: darkred;
+    font-weight: bolder;
+    color: black;
+    align-content: center;
+    padding: 2px;
+    font-size: 1.2em;
+    border-radius: 15px;
+}
+
+
+
+#headerform {
+    background-color: darkred;
+    height: 90px;
+    width:400px;
+    margin: auto;
+    padding: 8px;
+    box-sizing: content-box;
+}
+
+#footerform {
+    background-color: darkred;
+    height: 100px;
+    width:400px;
+    margin:0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+    font-weight: bolder;
+    color:black;
+    
+}
+
+#sectionform {
+    background-color: grey;
+    width:400px;
+    margin: auto;
+    height: 370px;
+    margin-top: 0px;
+}
+
+#contactdiv {
+    margin 3px 3px;
+    display: block;
+    padding: 10px;
+}
+
+
+
+#contactform {
+    width: 400px;
+    height: 370px;
+    background-color: darkred;
+   
+    position: absolute;
+    display: table;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    
+    margin: auto;
+    
+    opacity: 0.8;
+    
+    border-style: double;
+    border-color: gray;
+}
+
+#question {
+    background:url(http://www.freelargeimages.com/wp-content/uploads/2015/06/White_Background_01.jpg) right no-repeat #efefef;
+    display: block;
+    
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYxRDEzQTBCMzI0MzExRTFBNDYzRkQ4Qzc3RDdBOTg5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjYxRDEzQTBDMzI0MzExRTFBNDYzRkQ4Qzc3RDdBOTg5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjFEMTNBMDkzMjQzMTFFMUE0NjNGRDhDNzdEN0E5ODkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjFEMTNBMEEzMjQzMTFFMUE0NjNGRDhDNzdEN0E5ODkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz52VTCHAAABFUlEQVR42uxV0Q2DIBBV4z8bdAM26AZ1Ap3AToAT6AR1Ap2gbuAGzKD/TkCP5NmQRpQaSH96yQsJHO/k7t0ZK6WikJZEgS14gHSeZxX6BQuhwerL3pw6ACMIQkuQHsgluDQnM2ugN3rgrK33ha3INdbqBHn1wWFVUU7ghMKxLgt8Oe46yVQ7lrgoD/JdwDf/tg+ueK4mGDfOR5zV8D3VaBwFy6CM1VrsCfjYG81BclrPHVZp7HcoLN8LshdgNMg50pDh7In+uSCIsKUpnqZJWfQ8EB4gOlLRnXBzVVFvpIA5yJTBV241aeLSLI622aRmiho8k3uYRcM6LlLksEWzMA/DjqP4+oNLW5G9Wfz/J/88wEuAAQA9yExzBAEQqwAAAABJRU5ErkJggg==) no-repeat 280px 0 #FFF;
+  
+    border: 1px solid #848484;
+    border-radius: 10px;
+    width:290px;
+    height:100px;
+    
+     box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-background-clip: padding-box;
+    outline: 0;
+    
+    padding: 10px;
+
+
+}
+
+
+
+#backgroundlogo {
+    
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+    height: 100px;
+    width: 100px;
+}
+
+
+
+#logo1 {
+    
+        transform: skew(-26deg, -19deg) ;
+        -webkit-transform: skew(-26deg, -19deg) ;
+        -moz-transform: skew(-26deg, -19deg) ;
+        -o-transform: skew(-26deg, -19deg) ;
+        -ms-transform: skew(-26deg, -19deg) ;
+    
+    font-size: 4em;
+    position: absolute;
+    color: darkred;
+    
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+     border: 2px solid;
+    border-radius: 25px;
+    
+    margin-left: 40px;
+    
+    opacity: 0.5;
+}
+
+
+
+#logo2 {
+     
+        font-size: 2em;
+        color: darkred;
+        font-weight: bolder;
+        position: absolute;
+  
+}
+
+#mainlogo {
+    width:120px;
+    height: 80px;
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    border-radius: 20px;
+    
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 1%;
+    position: absolute;
+    
+    float:left;
+    display: block;
+}
+
+#logo3 {
+    margin-left: 81px;
+    font-size: 5em;
+    padding: 0px;
+    position: absolute;
+    color:darkred;
+    
+    opacity: 0.9;
+
+}
+
+#logo4 {
+    position: absolute;
+    margin-left: 78px;
+    margin-top: 23px;
+    font-size: 3em;
+    color: darkred;
+    
+    opacity: 0.7;
+    
+}
+
+#logo5 {
+    position: absolute;
+    margin-left: 73px;
+    margin-top: 33px;
+    font-size: 2em;
+    color: darkred;
+    
+    opacity: 0.5;
+}
+
+#logo6 {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 42px;
+    font-size: 1em;
+    color: darkred;
+}
+
+#logo11 {
+   
+    font-size: 4.9em;
+    position: absolute;
+    margin-top:-11px;
+    color:darkred;
+    margin-left: -7px;
+    
+    -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.9;
+}
+
+#logo10 {
+    font-size: 3.4em;
+    position: absolute;
+    margin-top:5px;
+    color:darkred;
+    margin-left: 9px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.7;
+}
+
+#logo9 {
+    font-size: 2.2em;
+    position: absolute;
+    margin-top:14px;
+    color:darkred;
+    margin-left: 23px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.5;
+}
+
+#logo8 {
+    font-size: 1.3em;
+    position: absolute;
+    margin-top:23px;
+    color:darkred;
+    margin-left: 33px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+}
+
+#sectionform {
+    height:430px;
+    padding: 10px;
+    padding-top: 0;
+}
+
+
+
+input {
+    width: 290px;
+}
+
+
+
+
+
+body {
+    
+}
+
+#navigationf {
+    float:right;
+    zoom:1.5;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+#navbuttonsf {
+    text-align: center;
+  
+}
+
+.navpagesf {
+    border-radius: 20px;
+    opacity: 0.95;
+    background-image: linear-gradient(black, red, black);
+    color: darkgray;
+    padding: 8px;
+    font-size: 0.6em;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+
+
