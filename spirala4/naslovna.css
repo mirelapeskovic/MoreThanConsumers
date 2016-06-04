@@ -1,0 +1,545 @@
+
+#logo {
+    float:left;
+}
+
+#forms {
+
+}
+
+#navigation {
+   clear: both;
+   zoom : 2;
+   position: relative;
+   margin-top: 4%;
+}
+
+
+
+
+#navbuttons {
+    text-align: center;
+}
+
+
+#mainsection {
+    float:left;
+  
+    width:70%;
+    height: auto;
+    position: absolute;
+   
+    display: table;
+    
+    left:0;
+    right: 0;
+    
+    margin: auto;
+    margin-top: 4%;
+   
+    
+}
+
+#mainaside {
+    float: right;
+    width: 15%;
+    height:25%;
+    margin-top: 12%;
+    position: relative;
+    display: block;
+}
+
+
+
+.pic {
+   
+    box-sizing: padding-box;
+    border-style: solid;
+    border-color: black;
+   
+    width: 86%;
+    height: 34%;
+    position: absolute;
+    
+    
+}
+
+
+
+.hnaslov {
+    color:black;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+
+
+.newtext {
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+#backgroundlogo {
+    
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+    height: 100px;
+    width: 100px;
+}
+
+
+
+#logo1 {
+        transform: skew(-26deg, -19deg) ;
+        -webkit-transform: skew(-26deg, -19deg) ;
+        -moz-transform: skew(-26deg, -19deg) ;
+        -o-transform: skew(-26deg, -19deg) ;
+        -ms-transform: skew(-26deg, -19deg) ;
+    
+    font-size: 4em;
+    position: absolute;
+    color: darkred;
+    
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+     border: 2px solid;
+    border-radius: 25px;
+    
+    margin-left: 40px;
+    
+    opacity: 0.5;
+}
+
+
+
+#logo2 {
+     
+        font-size: 2em;
+        color: darkred;
+        font-weight: bolder;
+        position: absolute;
+  
+}
+
+#mainlogo {
+    width:120px;
+    height: 80px;
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    border-radius: 20px;
+}
+
+#logo3 {
+    margin-left: 81px;
+    font-size: 5em;
+    padding: 0px;
+    position: absolute;
+    color:darkred;
+    
+    opacity: 0.9;
+
+}
+
+#logo4 {
+    position: absolute;
+    margin-left: 78px;
+    margin-top: 23px;
+    font-size: 3em;
+    color: darkred;
+    
+    opacity: 0.7;
+    
+}
+
+#logo5 {
+    position: absolute;
+    margin-left: 73px;
+    margin-top: 33px;
+    font-size: 2em;
+    color: darkred;
+    
+    opacity: 0.5;
+}
+
+#logo6 {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 42px;
+    font-size: 1em;
+    color: darkred;
+}
+
+#logo11 {
+   
+    font-size: 4.9em;
+    position: absolute;
+    margin-top:-11px;
+    color:darkred;
+    margin-left: -7px;
+    
+    -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.9;
+}
+
+#logo10 {
+    font-size: 3.4em;
+    position: absolute;
+    margin-top:5px;
+    color:darkred;
+    margin-left: 9px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.7;
+}
+
+#logo9 {
+    font-size: 2.2em;
+    position: absolute;
+    margin-top:14px;
+    color:darkred;
+    margin-left: 23px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    
+    opacity: 0.5;
+}
+
+#logo8 {
+    font-size: 1.3em;
+    position: absolute;
+    margin-top:23px;
+    color:darkred;
+    margin-left: 33px;
+    
+     -moz-transform: scale(-1, 1); 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+}
+
+.sign {
+    border-radius: 20px;
+    opacity: 0.9;
+    background-image: linear-gradient(black, green);
+    color: darkgray;
+    padding: 8px;
+    font-size: 0.8em;
+}
+
+label {
+    display: block;
+    margin-top:20px;
+    letter-spacing: 2px;
+    color: darkred;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin-top:20px;
+    letter-spacing: 2px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+.navpages {
+    border-radius: 20px;
+    opacity: 0.6;
+    background-image: linear-gradient(black, red, black);
+    color: darkgray;
+    padding: 8px;
+    font-size: 0.6em;
+}
+
+#backgroundpicn {
+    width:100%;
+    height:100%;
+    opacity: 0.1;
+}
+
+
+
+
+body {
+   /* background-image: url("http://il1.picdn.net/shutterstock/videos/6707308/thumb/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-attachment: fixed;
+    height: 99%;
+    width:99%;*/
+    
+    background-color: dimgrey;
+    
+}
+
+
+
+
+#maincontainer {
+    position: relative;
+    border-color: black;
+  
+}
+
+
+
+
+
+.link:hover {
+    text-decoration: none;
+    color:white;
+    font-weight: bolder;
+    
+    background-image: url("icon.jpg");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+    
+    
+  
+}
+
+.link
+{
+     text-decoration: none;
+    color:white;
+    font-weight: bolder;
+    
+    padding-left: 20px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+    
+    
+    top:20px;
+    left:20px;
+}
+
+li {
+    list-style: none;
+     align-content: center;
+}
+
+#linkovi {
+    position: relative;
+    float: right;
+    margin-right: 5%;
+    
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+img {
+    border-color: gray;
+    border-style: double;
+
+    
+}
+
+
+
+.tekst {
+    height: 45%;
+    width: 100%;  
+    padding: 0;
+    
+    margin-top: 10%;
+    min-height: 250px;
+  
+    
+}
+
+.datum {
+    height: 10%;
+    width: 100%;
+    
+    border-color: white;
+    border-style: double;
+    
+    text-align: center;
+    padding: 9%,
+    
+    margin-top: 40%;
+    
+    color:white;
+    
+    
+}
+
+#filter {
+   clear: both;
+   zoom : 1.4;
+   position: relative;
+   margin-top: 6%;
+   margin-left: 17%;
+   margin-right: 25%;
+}
+
+.filternews {
+    background-color: none;
+    color:darkred;
+    font-weight: bolder;
+    border-color: black;
+    opacity: 0.85;
+}
+
+
+
+
+#signs {
+
+ 
+    zoom: 1.5;
+    margin-top:40%;
+    margin-right: 8%;
+    text-align: center;
+    float: inherit;
+  
+}
+
+
+
+
+#prviDio {
+    width:100%;
+}
+
+a {
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+
+
+.s {
+    border-color: white;
+    border-style: groove;
+    padding: 4%;
+ 
+}
+
+.novosti {
+    float: left;
+    margin-right: 5px;
+    margin-top: 20px;
+    width:30%;
+    border-style: solid;
+  
+    min-height: 450px;
+    position: relative;
+    
+    background-color: black;
+    background: -webkit-linear-gradient(black, gray, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, gray, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, gray, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, gray, black); /* Standard syntax */
+    
+     padding: 2%;
+}
+
+.datum {
+    height: 10%;
+    width: 100%;
+    
+    border-color: white;
+    border-style: double;
+    
+    text-align: center;
+    padding: 9%,
+    
+    margin-top: 40%;
+    position: relative;
+    
+    color:white;
+}
+
+.tekst {
+    height: 45%;
+    width: 100%;  
+    padding: 0;
+    
+    margin-top: 10%;
+    min-height: 250px; 
+}
+
+.slika_novost {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 44%;
+}
+
+
+
+
+
+#sort {
+    background-color:darkgray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+#selekcija {
+    background-color:darkgray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+#naslov_sortiranje {
+    color: black;
+}
+
+#brojnovosti {
+    color: white;
+    font-weight: 200;
+}
