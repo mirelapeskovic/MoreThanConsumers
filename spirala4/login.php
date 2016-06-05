@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,72 +15,73 @@
 header('Content-Type: text/html; charset=utf-8');
 
 
-    if(Login())
-    {
-        header("location:dodajNovost.php");
-        alert("moze");
-    }
-    else
-    {
-        header("location:signInForma.html");
-        alert("ne moze");
-    }
-
-function Login() {
-
-
     
-     if(isset($_POST['Username']) && !empty($_POST['Username']) && isset($_POST['Password']) && !empty($_POST['Pasword']))
-     {
-         $username = trim($_POST['Username']);
-         $password = trim($_POST['Password']);
-         
-         if(!$this->CheckLoginInTXT($username,$password))
-         {
-             return false;
-         }
-     
-       
-         
-         $_SESSION['login_user']= $username; 
-         $_SESSION['login_pass']= $password; 
-         
-
- 
-      
-         if(empty($_SESSION[$user]) || empty($_SESSION[$pw]))
-         {
-            return false;
-         }
-         
-        return true;
-     }
-}
 
 
-function CheckLoginInTXT($username, $passwd)
+function Login($username, $password)
 {
 
-$pass_hash = md5($passwd, false);
-$u_p = $username . " " . $pass_hash;
- 
+ //$dbc = new PDO("mysql:dbname=spirala4; host=localhost; charset=utf8", "spirala4", "spirala4");
+            define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+            define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT'));
+            define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+            define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+            define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
 
-$file_admin = fopen("admin.txt", "r");
-$ispis= "";
     
-while(!feof($file_admin)) {
-    
-   $red = fgets($file_admin);
-   if($u_p==$red)
-   {
-      return true;
-   }
+            $dbn = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
+            $dbc = new PDO($dbn, DB_USER, DB_PASS);
+            $dbc->exec("set names utf8");
+          
+           $autori = $dbc->query("select * from Autor");
 
-   else false;
-}
     
-fclose($file_admin);
+         if(!$autori)
+            {
+                $greska = $dbc->errorInfo();
+                print "SQL greška: " . $greska[2];
+                exit();
+            }
     
+  $administratori = $dbc->query("select * from Administrator");
+    
+         if(!$administratori)
+            {
+                $greska = $dbc->errorInfo();
+                print "SQL greška: " . $greska[2];
+                exit();
+            }
+    
+  foreach($autori as $autor)
+  {
+      if($autor['username']==$username && $autor['password']==$password)
+      {
+          
+          
+         $_SESSION['username']= $username; 
+         $_SESSION['password']= $password; 
+         $_SESSION['login']=true;
+          
+          header("location:dodajNovost.php");
+      }
+  }
+    
+  foreach($administratori as $administrator)
+  {
+      if($administrator['username']==$username && $administrator['password']==$password)
+      {
+    
+          
+         $_SESSION['username']= $username; 
+         $_SESSION['password']= $password; 
+         $_SESSION['login']=true;
+          
+         header("location:admin.php");
+      }
+  }
+    
+
+
 }
 
 

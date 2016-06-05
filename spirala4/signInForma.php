@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,83 +14,73 @@
         
     <?php
         
-    require "core.inc.php";
-        
-    if(isset($_POST['Username']) && !empty($_POST['Username']) && isset($_POST['Password']) && !empty($_POST['Password']))
-        
-    {
-         if(Login($_POST['Username'], $_POST['Password']))
-             header("location:dodajNovost.php");
-         else
-             header("location:signInForma.php");
-     
+          if(isset($_POST['Username']) && isset($_POST['Password']))  
+          {
+              
+              $username=$_POST['Username'];
+              $password=$_POST['Password'];
+              
+              
+                     define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+                    define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT'));
+                    define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+                    define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+                    define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
+
     
-    }
-        
-  
+                    $dbn = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
+                    $dbc = new PDO($dbn, DB_USER, DB_PASS);
+                    $dbc->exec("set names utf8");
+                
+                  //  $dbc = new PDO("mysql:dbname=spirala4; host=localhost; charset=utf8", "spirala4", "spirala4");
+                    $autori = $dbc->query("select * from Autor");
 
-     function Login($username, $password) {
-//if(isset($_POST['Username']) && !empty($_POST['Username']) && isset($_POST['Password']) && !empty($_POST['Password']))
-  
-   
-         
-         if(!CheckLoginInTXT($username,$password))
-         {
-           
-             return false;
-         }
-     
-         session_start();
-         
-         $_SESSION['login_user']= $username; 
-         $_SESSION['login_pass']= $password; 
-         $_SESSION['id'] = 1;
-         
-
-       
-        return true;
+    
+                    if(!$autori)
+                        {
+                            $greska = $dbc->errorInfo();
+                            print "SQL greška: " . $greska[2];
+                            exit();
+                        }
+    
+                    $administratori = $dbc->query("select * from Administrator");
+    
+                    if(!$administratori)
+                        {
+                            $greska = $dbc->errorInfo();
+                            print "SQL greška: " . $greska[2];
+                            exit();
+                        }
+    
+                    foreach($autori as $autor)
+                        {
+                            if($autor['username']==$username && $autor['password']==$password)
+                                {
           
-}
-
-
-function CheckLoginInTXT($username, $passwd)
-{
-
-
-   
-$pass_hash = md5($passwd, false);
-$u_p = $username . " " . $pass_hash;
- 
-
-$file_admin = fopen("admin.txt", "r");
-$ispis= "";
+                                    $_SESSION['username']= $username; 
+                                    $_SESSION['password']= $password; 
+                                    $_SESSION['login']=true;
+          
+                                    header("location:dodajNovost.php");
+                                    break;
+                                }
+                        }
     
-while(!feof($file_admin)) {
+                    foreach($administratori as $administrator)
+                        {
+                            if($administrator['username']==$username && $administrator['password']==$password)
+                                {
     
-   $red = fgets($file_admin);
-   if($u_p==$red)
-   {
-      return true;
-   }
-
-   return false;
-}
-    
-fclose($file_admin);
-    
-}
+                                    $_SESSION['username']= $username; 
+                                    $_SESSION['password']= $password; 
+                                    $_SESSION['login']=true;
+          
+                                    header("location:admin.php");
+                                    break;
+                                }
+                            }
         
-
-
-
-
-/*
-$Hash_Pw = md5 ( "adminSpirala3!", false  );
-echo $Hash_Pw;
-hashiran password admina je 1f15adf72cdd9bfd815654705b74cf39
-username je admin
-*/
-
+                    }
 ?>
 
         

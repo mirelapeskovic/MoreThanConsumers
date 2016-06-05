@@ -77,7 +77,7 @@
                 
                     function sortirajDatume($prvi, $drugi)
 		              {
-                        echo "bla";
+                      
                          $dateTime1 = new DateTime(str_replace('"', '',$prvi['datum'])); 
 			             $dateTime2 = new DateTime(str_replace('"', '',$drugi['datum']));
                         
@@ -115,7 +115,7 @@
                     $dbn = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
                     $dbc = new PDO($dbn, DB_USER, DB_PASS);
                     $dbc->exec("set names utf8");
-            
+                  //  $dbc = new PDO("mysql:dbname=spirala4; host=localhost; charset=utf8", "spirala4", "spirala4");
                     $novosti = $dbc->query("select * from Novost");
 
                     if(!$novosti)

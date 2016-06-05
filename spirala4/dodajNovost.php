@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -10,10 +15,10 @@
     <body>
         
         <?PHP
-           require "core.inc.php";
+        //   require "core.inc.php";
            date_default_timezone_set("Europe/Sarajevo");
         
-           if(!isset($_SESSION['id']))
+           if(!isset($_SESSION['login']))
            {
                header("location:signInForma.php");
            }
@@ -22,8 +27,10 @@
            if(isset($_POST["logout"]))
            {
            
-           session_destroy();
-           header("location: ".$http_referer);
+           unset($_SESSION['username']);
+           unset($_SESSION['password']);
+           unset($_SESSION['login']);
+           header('location:signInForma.php');
     
            }
         
