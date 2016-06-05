@@ -117,7 +117,7 @@ username je admin
         <section id="navigationf">
        
                 <nav id="navbuttonsf">
-                    <button class="navpagesf"><a href="naslovna.php">Room</a></button>
+                    <button class="navpagesf"><a href="index.php">Room</a></button>
                     <button class="navpagesf"><a href="tabela.html">Stories</a></button>
                     <button class="navpagesf"><a href="contactpage.html">Contact</a></button>
                 </nav>

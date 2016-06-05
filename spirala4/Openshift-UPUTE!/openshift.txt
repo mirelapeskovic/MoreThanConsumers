@@ -1,0 +1,9 @@
+Spirala 3 : http://consumers-zakkwylde.rhcloud.com/spirala3/naslovna.php
+Spirala 4 : http://morethanconsumers-zakkwylde.rhcloud.com/spirala4/
+
+
+Spirala 4:
+Baza je na Openshiftu, nije lokalno. Pristupni podaci phpmyadminu su u istom
+folderu slika : phpmyadmin-pristupnipodaci
+Dodavanje novosti i prikaz novosti iz baze radi. 
+Sortiranje iz nekog razloga ne radi, iako radi u spirali 3. 

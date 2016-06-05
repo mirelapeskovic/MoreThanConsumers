@@ -43,24 +43,126 @@
             if(!empty($name))
             {
                 $location = 'uploads';
-                move_uploaded_file($tmp_name, $location."/".$name);
+                //$location = '';
+               move_uploaded_file($tmp_name, $location."/".$name);
                 
-        if(isset($_POST['naslov']) && isset($_POST['tekst']) && !empty($_POST['naslov']) && !empty($_POST['tekst']))
+                
+                
+        if(isset($_POST['naslov']) && isset($_POST['tekst']) && !empty($_POST['naslov']) && !empty($_POST['tekst']) && isset($_POST['autor']) && !empty($_POST['autor']))
             {
             
             $naslov = $_POST['naslov'];
             $tekst = $_POST['tekst'];
             $url = htmlEntities($location."/".$name, ENT_QUOTES);
-            $datum=date("m/d/Y H:i:s");
+      //      $datum=date("m/d/Y H:i:s");
+            $autor = $_POST['autor'];
+            $dvokod = $_POST['dvokod'];
+            
+         
+            if(isset($_POST['checkcomm']) && $_POST['checkcomm']=="1")
+            {
+                $komentar = true;
+            }
+            
+            else $komentar = false;
+           
+            
+            $brojtelefona = $_POST['pozivni'].$_POST['broj'];
+            
+    
+
+            define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+            define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT'));
+            define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+            define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+            define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
+
+    
+            $dbn = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
+            $dbc = new PDO($dbn, DB_USER, DB_PASS);
+            $dbc->exec("set names utf8");
+      
+            
+          // $dbc = new PDO("mysql:dbname=spirala4; host=localhost; charset=utf8", "spirala4", "spirala4");
+            
+            $rezultat = $dbc->query("select * from Novost");
+            if(!$rezultat)
+            {
+                $greska = $dbc->errorInfo();
+                print "SQL greška: " . $greska[2];
+                exit();
+            }
+
+    
+            
+            
+            $autori = $dbc->query("select * from Autor");
+            
+            
+                    
+            if (!$autori) {
+            $error = $dbc->errorInfo();
+            print "SQL greška: ".$error[2];
+            exit();
+            }
+            
+           
+            
+            $id = "-1";
+            foreach ($autori as $autor_baza)
+            {
+                if($autor_baza['imeprezime']==$autor)
+                {
+                $id = $autor_baza['id'];
+                break;
+                }
+            }
+     
+         
+            if ($id == "-1")
+            {
+                $statement=$dbc->prepare("INSERT INTO Autor (imeprezime) VALUES ('$autor')");
+                $statement->execute();
+                
+                $autori_postojeci = $dbc->query("select * from Autor");
+            
+                if (!$autori_postojeci) {
+                $error = $dbc->errorInfo();
+                print "SQL greška: ".$error[2];
+                exit();
+                }
+                 
+            
+                foreach ($autori_postojeci as $autor_baza)
+                {
+                    if($autor_baza['imeprezime']==$autor)
+                    {
+                    $id = $autor_baza['id'];
+                    break;
+                    }
+                }
+                
+                   
+             }
+      
+            
+            $statement=$dbc->prepare("INSERT INTO Novost (naslov, tekst, putanja, autor_id, komentar, dvoslovnikod, brojtelefona) VALUES ('$naslov','$tekst', '$url', '$id', '$komentar', '$dvokod', '$brojtelefona')");
+
+            $statement->execute();
             
             // upis u csv
             
-            $niz=array($naslov, $tekst, $url, $datum);
+            
+        /*    $niz=array($naslov, $tekst, $url, $datum);
 			$novost=fopen("Novosti.csv","a") or die("Datoteka se ne može otvoriti");
 			fwrite($novost,"\n");
 			fputcsv($novost,$niz,";");
 			
 			fclose($novost);
+            
+        */
+            
+            
             
             
             }
@@ -103,7 +205,7 @@
             Dodaj Tekst: <br><br> <textarea id="tekst" name="tekst" type="textarea"> </textarea>
             Dodaj Sliku: <br><br> <input id="slika" name="slika" type="file" accept="image/*" onchange="loadFile(event)"/>
             <br> <br>
-            Autor: <input id="autor" name="autor" type="text"/> <input type="checkbox" /> Omogući komentare
+            Autor: <input id="autor" name="autor" type="text"/> <input type="checkbox" id="checkcomm" name="checkcomm" value="1"/> Omogući komentare
             <br> <br>
             Dodaj dvoslovni kod države :  <input id="dvokod" name="dvokod" type="text" onfocus="getCallingCode()" onblur="codeValidation()"/> <p id="upozorenje"></p>
             <br> 

@@ -39,7 +39,7 @@
             <section id="navigation">
        
                 <nav id="navbuttons">
-                    <button class="navpages"><a href="index.php">Room</a></button>
+                    <button class="navpages"><a href="naslovna.php">Room</a></button>
                     <button class="navpages"><a href="tabela.html">Stories</a></button>
                     <button class="navpages"><a href="contactpage.html">Contact</a></button>
                 </nav>
@@ -59,7 +59,7 @@
             </section>
                 
         
-         <form method="post" action="index.php"> 
+         <form method="post" action="naslovna.php"> 
             <label id="naslov_sortiranje">Sort:</label>
 	           <br>
 	               <select id="selekcija" name="selekcija">
@@ -77,11 +77,8 @@
                 
                     function sortirajDatume($prvi, $drugi)
 		              {
-                        echo "bla";
                          $dateTime1 = new DateTime(str_replace('"', '',$prvi['datum'])); 
-			             $dateTime2 = new DateTime(str_replace('"', '',$drugi['datum']));
-                        
-                    
+			             $dateTime2 = new DateTime(str_replace('"', '',$drugi['datum'])); 
 			             $t1=$dateTime1->format('U'); 
 			             $t2=$dateTime2->format('U'); 
 			             return $t2-$t1;
@@ -89,89 +86,76 @@
 		      
                     function sortirajNaslove($prvi, $drugi)
 		              {
-
 			             $t1=$prvi['naslov'];
 			             $t2=$drugi['naslov'];
 			             return strcmp($t1,$t2);
-
+			
 		              }
                 
             
         
                echo "<section id='mainsection'>";
                
-     
+                
+                
+                if(isset($_REQUEST['sort']))
+		          {
+                        $izbor=$_REQUEST['selekcija'];
+			
+			             if($izbor=="datum")
+			                 {
+				                usort($vijesti, 'sortirajDatume');
+			                 }
+                        
+                         else
+			                 {
+				                usort($vijesti, 'sortirajNaslove');
+			                 }
+			
+		          }
+		
+                
        //     echo "<section id='mainsection'> <p id='broj_novosti>".$broj_novosti."</p>";
                 
-            //    $dbc = new PDO("mysql:dbname=spirala4; host=localhost; charset=utf8", "spirala4", "spirala4");
-                
-                    define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
-                    define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT'));
-                    define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
-                    define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
-                    define('DB_NAME',getenv('OPENSHIFT_GEAR_NAME'));
-
-    
-                    $dbn = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
-                    $dbc = new PDO($dbn, DB_USER, DB_PASS);
-                    $dbc->exec("set names utf8");
+                $dbc = new PDO("mysql:dbname=spirala4; host=localhost; charset=utf8", "spirala4", "spirala4");
             
-                    $novosti = $dbc->query("select * from Novost");
-
-                    if(!$novosti)
-                        {
-                            $greska = $dbc->errorInfo();
-                            print "SQL greška: " . $greska[2];
-                            exit();
-                        }
+                $novosti = $dbc->query("select * from Novost");
                 
-                    $broj_novosti = $novosti->rowCount();
+                if(!$novosti)
+                {
+                    $greska = $dbc->errorInfo();
+                    print "SQL greška: " . $greska[2];
+                    exit();
+                }
                 
+                $broj_novosti = $novosti->rowCount();
                 
-                  if(isset($_REQUEST['sort']))
-                      {
-                            $izbor=$_REQUEST['selekcija'];
-			
-                            if($izbor=="datum")
-			                 {
-                                    usort($novosti, 'sortirajDatume');
-                             }
-                        
-                             else
-                                {
-				                usort($novosti, 'sortirajNaslove');
-                            
-                                }
-			
-                     }
-                
-                
-                    echo  "<p id='brojnovosti' visibility='hidden'>Broj novosti: ".$broj_novosti."</p>";
+            echo  "<p id='brojnovosti' visibility='hidden'>Broj novosti: ".$broj_novosti."</p>";
                 
           
 
-                    $j=0;
-                    foreach($novosti as $novost)
-                        {
+             $j=0;
+             foreach($novosti as $novost)
+		      {
 			
-                            $naslov=$novost['naslov'];
-                            $tekst=$novost['tekst'];
-                            $url=$novost['putanja'];
+			     $naslov=$novost['naslov'];
+			     $tekst=$novost['tekst'];
+			     $url=$novost['putanja'];
                  
                 
-                            $datum_baza=$novost['datum'];
+			     $datum_baza=$novost['datum'];
     
-                            $date = new DateTime();
+                $date = new DateTime();
                 
 
-                            $date->setTimestamp(strtotime($datum_baza));
-                            $datum=$date->format('m/d/Y H:i:s');
+                 $date->setTimestamp(strtotime($datum_baza));
+                 $datum=$date->format('m/d/Y H:i:s');
         
-                            //$datum=date("m/d/Y H:i:s", $dt);
+                 //$datum=date("m/d/Y H:i:s", $dt);
                  
-                            $id = $j+100;
-                            $id_div = $j+110;
-                            $j++;
+                 $id = $j+100;
+                 $id_div = $j+110;
+                 $j++;
                 
                 echo
 			     "

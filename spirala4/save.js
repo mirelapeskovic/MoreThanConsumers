@@ -36,20 +36,8 @@ var listaMjeseca = [];
     var el=document.getElementById(p.toString());
         
     var datumObjave= el.innerHTML;
-
+         
     if(datumObjave.length==19){
-            var m = parseInt(datumObjave.substr(0,1));
-            var d = parseInt(datumObjave.substr(2,2));
-            var y = parseInt(datumObjave.substr(5,4));
-   
-            var h = parseInt(datumObjave.substr(10,2));
-            var min = parseInt(datumObjave.substr(13,2));
-            var sec = parseInt(datumObjave.substr(16,2));
-     
-    }
-    
-    if(datumObjave.length==18)
-    {
          var m = parseInt(datumObjave.substr(0,2));
          var d = parseInt(datumObjave.substr(3,2));
          var y = parseInt(datumObjave.substr(6,4));
@@ -57,7 +45,19 @@ var listaMjeseca = [];
          var h = parseInt(datumObjave.substr(11,2));
          var min = parseInt(datumObjave.substr(14,2));
          var sec = parseInt(datumObjave.substr(17,2));
-        
+     
+    }
+    
+    if(datumObjave.length==18)
+    {
+           var m = parseInt(datumObjave.substr(0,1));
+            var d = parseInt(datumObjave.substr(2,2));
+            var y = parseInt(datumObjave.substr(5,4));
+   
+            var h = parseInt(datumObjave.substr(10,2));
+            var min = parseInt(datumObjave.substr(13,2));
+            var sec = parseInt(datumObjave.substr(16,2));
+
     }
     
     var datumObjave =
